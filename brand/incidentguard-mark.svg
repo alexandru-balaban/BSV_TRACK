@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="IncidentGuard">
+  <rect width="64" height="64" rx="16" fill="#000"/>
+  <path d="M32 9 13 16.5v13c0 11.2 8 19.9 19 22.5 11-2.6 19-11.3 19-22.5v-13L32 9Z" fill="none" stroke="#F5F5F7" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="32" cy="30" r="6.5" fill="#8F98F0"/>
+</svg>

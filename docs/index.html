@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — IncidentGuard</title>
+<link rel="icon" href="../brand/pavlex-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><nav aria-label="Main">
+<a class="brand" href="../landing-page/"><svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"/><circle cx="14" cy="13.5" r="3.5" fill="#8F98F0"/></svg>IncidentGuard</a>
+<div class="links"><a href="../landing-page/">Product</a><a href="../docs/" aria-current="page">Docs</a><a href="../status/">Status</a><a href="../about/">About</a><a class="cta" href="../portal/">Get a quote</a></div>
+</nav></header>
+<main>
+<section class="hero"><p class="eyebrow">Developers</p><h1>Documentation.</h1><p class="lead">Everything an AI agent needs to buy a security investigation: quote, pay, collect.</p></section>
+<div class="wrap prose">
+<p class="note">IncidentGuard is a hackathon prototype built at the TUM Blockchain &amp; AI Hackathon 2026. Items in <span class="ph">[BRACKETS]</span> are placeholders to be completed before any real launch.</p>
+<div class="toc" style="margin-top:28px"><a href="#quickstart">Quick start</a><a href="#auth">Authentication</a><a href="#quote">Quote</a><a href="#pay">Pay</a><a href="#report">Report</a><a href="#budgets">Agent budgets</a><a href="#errors">Errors</a></div>
+
+<h2 id="quickstart">Quick start</h2>
+<p>Every investigation follows the same three calls. One payment buys exactly one report — a payment can never be reused.</p>
+<pre><code><span class="k"># 1. ask for a quote</span>
+POST /v1/quote        { "question": "...", "tier": "guardrail" }
+<span class="k"># 2. pay it from the agent's BRC-100 wallet, then submit the transaction</span>
+POST /v1/pay          { "quote_id": "q_…", "tx": "&lt;raw tx hex&gt;" }
+<span class="k"># 3. collect the report</span>
+GET  /v1/report/{request_id}</code></pre>
+<p>Base URL: <code><span class="ph">[API_BASE_URL]</span></code>. All bodies are JSON.</p>
+
+<h2 id="auth">Authentication</h2>
+<p>Register your agent in the <a href="../portal/agents.html">Agents &amp; API</a> page of the portal to get an API key. Send it on every request:</p>
+<pre><code>Authorization: Bearer ig_live_<span class="ph">[YOUR_KEY]</span></code></pre>
+<p>An API key identifies the agent and its budget. It never grants access to evidence on its own — paying and seeing are separate permissions.</p>
+
+<h2 id="quote"><span class="method post">POST</span>/v1/quote</h2>
+<p>Returns a fixed price bound to a new request ID. Quotes are valid for 10 minutes.</p>
+<table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>question</code></td><td>string</td><td>What you want investigated, in plain language.</td></tr>
+<tr><td><code>tier</code></td><td>string</td><td><code>guardrail</code> (everyday checks) or <code>pentest_pro</code> (authorised targets only).</td></tr>
+<tr><td><code>scope</code></td><td>object</td><td>Required for <code>pentest_pro</code>: <code>{ "target": "staging.example.com", "authorised": true }</code>.</td></tr>
+</tbody></table>
+<pre><code><span class="k">// 200 OK</span>
+{
+  "quote_id": "q_8c21…",
+  "request_id": "req_7f3a91c2",
+  "price": { "amount": "<span class="ph">[PRICE]</span>", "currency": "BSV" },
+  "pay_to": "<span class="ph">[PAYMENT_ADDRESS_OR_SCRIPT]</span>",
+  "expires_at": "2026-10-31T12:10:00Z"
+}</code></pre>
+
+<h2 id="pay"><span class="method post">POST</span>/v1/pay</h2>
+<p>Submit the signed BSV transaction that pays the quote. The portal checks that the amount matches, binds the payment to the request, and rejects any transaction that was already used.</p>
+<pre><code><span class="k">// request</span>
+{ "quote_id": "q_8c21…", "tx": "&lt;raw tx hex&gt;" }
+
+<span class="k">// 202 Accepted</span>
+{ "request_id": "req_7f3a91c2", "status": "verifying" }</code></pre>
+
+<h2 id="report"><span class="method get">GET</span>/v1/report/{request_id}</h2>
+<p>Poll until <code>status</code> is <code>delivered</code>. Every finding links to a citation, and limitations are always stated.</p>
+<pre><code>{
+  "request_id": "req_7f3a91c2",
+  "status": "delivered",
+  "tier": "guardrail",
+  "findings": [
+    { "severity": "high", "text": "Pattern matches credential stuffing…", "citations": [1, 2] }
+  ],
+  "citations": [ { "id": 1, "title": "<span class="ph">[SOURCE TITLE]</span>", "url": "…" } ],
+  "limitations": "Based only on the log excerpt provided.",
+  "payment_tx": "3c9e…a41b",
+  "report_hash": "sha256:…"
+}</code></pre>
+
+<h2 id="budgets">Agent budgets</h2>
+<p>Each agent has a daily spending cap and a list of tiers it may buy. A quote that would exceed the cap is refused before any payment. Approved agents can also draw capped credit from the non-custodial <a href="../portal/pool.html">Growth Pool</a>.</p>
+
+<h2 id="errors">Errors</h2>
+<table><thead><tr><th>Code</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>400 invalid_request</code></td><td>Missing or malformed field.</td></tr>
+<tr><td><code>402 payment_required</code></td><td>Report requested before a verified payment.</td></tr>
+<tr><td><code>403 out_of_scope</code></td><td>Pentest target not authorised, or tier not allowed for this agent.</td></tr>
+<tr><td><code>409 payment_reused</code></td><td>This transaction already paid for another request.</td></tr>
+<tr><td><code>410 quote_expired</code></td><td>Quote older than 10 minutes — request a new one.</td></tr>
+<tr><td><code>429 budget_exceeded</code></td><td>The agent's daily cap would be exceeded.</td></tr>
+</tbody></table>
+
+</div>
+</main>
+<footer><div class="in">
+<span style="display:flex;align-items:center;gap:10px"><img src="../brand/pavlex-mark.svg" width="20" height="20" alt="" style="border-radius:5px">© 2026 IncidentGuard · made by <a href="../about/" style="color:var(--text);font-weight:600">pavLex</a></span>
+<nav aria-label="Footer"><a href="../docs/" aria-current="page">Docs</a><a href="../status/">Status</a><a href="../press/">Press kit</a><a href="../security/">Security</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/impressum.html">Impressum</a><a href="../legal/cookies.html">Cookies</a></nav>
+</div></footer>
+</body>
+</html>
