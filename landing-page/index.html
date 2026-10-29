@@ -39,9 +39,10 @@ IncidentGuard
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(18px, 2.4vw, 36px); font-size: 16px; font-weight: 500; color: #A1A1A6">
 <a href="#bsv" style="text-decoration: none; color: #A1A1A6">Why BSV</a>
 <a href="#how" style="text-decoration: none; color: #A1A1A6">How it works</a>
+<a href="#architecture" style="text-decoration: none; color: #A1A1A6">Architecture</a>
 <a href="#agents" style="text-decoration: none; color: #A1A1A6">Agents</a>
 <a href="#pool" style="text-decoration: none; color: #A1A1A6">Growth Pool</a>
-<a class="cta" href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 11px 22px; border-radius: 980px; font-weight: 600">Get a quote</a>
+<a class="cta" href="../portal/" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 11px 22px; border-radius: 980px; font-weight: 600">Get a quote</a>
 </div>
 </nav>
 </header>
@@ -51,7 +52,7 @@ IncidentGuard
 <h1 style="margin: 0; font-size: clamp(48px, 8vw, 104px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700">Security answers.<br>Pay per question.</h1>
 <p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Cited incident investigations. Settled on <span style="color: var(--accent-text); font-weight: 700">BSV</span>.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding-top: 16px">
-<a href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 14px 26px; border-radius: 980px; font-weight: 600; font-size: 17px" class="cta">Get a quote</a>
+<a class="cta" href="../portal/" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 14px 26px; border-radius: 980px; font-weight: 600; font-size: 17px" class="cta">Get a quote</a>
 <a href="#agents" style="text-decoration: none; color: var(--accent-text); padding: 14px 10px; font-weight: 500; font-size: 17px">For agents ›</a>
 </div>
 </section>
@@ -109,11 +110,83 @@ IncidentGuard
 </div>
 </section>
 
+<section id="architecture" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px; border-top: 1px solid #1D1D1F">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+<p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">Architecture</p>
+<h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Under the hood.</h2>
+</div>
+<div style="width: 100%; max-width: min(1200px, calc((100vh - 72px - 300px) * 2.01)); max-width: min(1200px, calc((100svh - 72px - 300px) * 2.01))">
+<svg style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="40 70 1360 675" font-family="Inter, system-ui, sans-serif" role="img" aria-label="How IncidentGuard works on BSV: humans and agents ask the portal, the AI core investigates and returns a cited report; every payment, the non-custodial Growth Pool and the audit trail live on BSV.">
+<defs>
+<linearGradient id="ig-rail" x1="0" x2="1"><stop offset="0" stop-color="#5049E8" stop-opacity="0"/><stop offset="0.12" stop-color="#5049E8"/><stop offset="0.88" stop-color="#5049E8"/><stop offset="1" stop-color="#5049E8" stop-opacity="0"/></linearGradient>
+<linearGradient id="ig-down" gradientUnits="userSpaceOnUse" x1="0" y1="320" x2="0" y2="544"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#8F98F0"/></linearGradient>
+<linearGradient id="ig-hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8F98F0"/><stop offset="1" stop-color="#5049E8"/></linearGradient>
+<marker id="ig-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#A1A1A6"/></marker>
+<marker id="ig-arA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8F98F0"/></marker>
+</defs>
+<rect x="80" y="90" width="340" height="230" rx="28" fill="#0B0B0C" stroke="#1D1D1F"/>
+<g transform="translate(112,120)" fill="none" stroke="#8F98F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M4 26c0-5 3.6-8 8-8s8 3 8 8"/><rect x="24" y="8" width="14" height="12" rx="3"/><path d="M31 8V5"/><circle cx="28.5" cy="14" r="0.8" fill="#8F98F0"/><circle cx="33.5" cy="14" r="0.8" fill="#8F98F0"/><path d="M24 26c0-3 3-4.5 7-4.5s7 1.5 7 4.5"/></g>
+<text x="112" y="194" font-size="13" font-weight="600" letter-spacing="0.08em" fill="#6E6E73">CLIENTS</text>
+<text x="112" y="230" font-size="30" font-weight="700" letter-spacing="-0.025em" fill="#F5F5F7">Humans &amp; agents</text>
+<text x="112" y="262" font-size="17" fill="#A1A1A6">Any BRC-100 wallet</text>
+<rect x="550" y="90" width="340" height="230" rx="28" fill="#0B0B0C" stroke="url(#ig-hero)" stroke-width="1.5"/>
+<g transform="translate(582,120)" fill="none" stroke="#8F98F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2 5 6.5v8c0 7 4.8 12 11 13.5 6.2-1.5 11-6.5 11-13.5v-8L16 2Z"/><circle cx="16" cy="15" r="4" fill="#8F98F0" stroke="none"/></g>
+<text x="582" y="194" font-size="13" font-weight="600" letter-spacing="0.08em" fill="#8F98F0">PORTAL</text>
+<text x="582" y="230" font-size="30" font-weight="700" letter-spacing="-0.025em" fill="#F5F5F7">IncidentGuard</text>
+<text x="582" y="262" font-size="17" fill="#A1A1A6">Quote · verify · deliver</text>
+<rect x="1020" y="90" width="340" height="230" rx="28" fill="#0B0B0C" stroke="#1D1D1F"/>
+<g transform="translate(1052,120)" fill="none" stroke="#8F98F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="20" height="20" rx="5"/><rect x="12" y="12" width="8" height="8" rx="2"/><path d="M11 2v4M16 2v4M21 2v4M11 26v4M16 26v4M21 26v4M2 11h4M2 16h4M2 21h4M26 11h4M26 16h4M26 21h4"/></g>
+<text x="1052" y="194" font-size="13" font-weight="600" letter-spacing="0.08em" fill="#6E6E73">AI CORE</text>
+<text x="1052" y="230" font-size="30" font-weight="700" letter-spacing="-0.025em" fill="#F5F5F7">Investigate</text>
+<rect x="1052" y="254" width="149.5" height="32" rx="16" fill="#1D1D1F"/>
+<text x="1126.75" y="275" text-anchor="middle" font-size="14" font-weight="600" fill="#F5F5F7">Guardrail Agent</text>
+<rect x="1209.5" y="254" width="117.1" height="32" rx="16" fill="#1D1D1F"/>
+<text x="1268.05" y="275" text-anchor="middle" font-size="14" font-weight="600" fill="#F5F5F7">Pentest Pro</text>
+<path d="M426 180 L544 180" stroke="#A1A1A6" stroke-width="1.5" marker-end="url(#ig-ar)"/>
+<path d="M544 236 L426 236" stroke="#8F98F0" stroke-width="1.5" marker-end="url(#ig-arA)"/>
+<rect x="460.69" y="165" width="48.62" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="485" y="184.5" text-anchor="middle" font-size="13" font-weight="500" fill="#A1A1A6">ask</text>
+<rect x="449.38" y="221" width="71.24" height="30" rx="15" fill="#000" stroke="#5049E8"/>
+<text x="485" y="240.5" text-anchor="middle" font-size="13" font-weight="500" fill="#8F98F0">report</text>
+<path d="M896 180 L1014 180" stroke="#A1A1A6" stroke-width="1.5" marker-end="url(#ig-ar)"/>
+<path d="M1014 236 L896 236" stroke="#8F98F0" stroke-width="1.5" marker-end="url(#ig-arA)"/>
+<rect x="930.69" y="165" width="48.62" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="955" y="184.5" text-anchor="middle" font-size="13" font-weight="500" fill="#A1A1A6">run</text>
+<rect x="923.15" y="221" width="63.7" height="30" rx="15" fill="#000" stroke="#5049E8"/>
+<text x="955" y="240.5" text-anchor="middle" font-size="13" font-weight="500" fill="#8F98F0">cited</text>
+<rect x="60" y="558.5" width="1320" height="3" rx="1.5" fill="url(#ig-rail)"/>
+<text x="80" y="532" font-size="13" font-weight="600" letter-spacing="0.08em" fill="#8F98F0">SETTLED ON BSV</text>
+<path d="M250 320 L250 544" stroke="url(#ig-down)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+<rect x="225.69" y="385" width="48.62" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="250" y="404.5" text-anchor="middle" font-size="13" font-weight="500" fill="#A1A1A6">pay</text>
+<circle cx="250" cy="560" r="9" fill="#000" stroke="#8F98F0" stroke-width="3"/>
+<text x="250" y="612" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="-0.02em" fill="#F5F5F7">Payment</text>
+<text x="250" y="638" text-anchor="middle" font-size="16" fill="#A1A1A6">1 tx ↔ 1 request</text>
+<path d="M720 320 L720 544" stroke="url(#ig-down)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+<rect x="650.45" y="385" width="139.1" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="720" y="404.5" text-anchor="middle" font-size="13" font-weight="500" fill="#A1A1A6">verify · credit</text>
+<circle cx="720" cy="560" r="9" fill="#000" stroke="#F0A050" stroke-width="3"/>
+<text x="720" y="612" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="-0.02em" fill="#F5F5F7">Growth Pool</text>
+<text x="720" y="638" text-anchor="middle" font-size="16" fill="#A1A1A6">Non-custodial</text>
+<path d="M1190 320 L1190 544" stroke="url(#ig-down)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+<rect x="1154.38" y="385" width="71.24" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="1190" y="404.5" text-anchor="middle" font-size="13" font-weight="500" fill="#A1A1A6">anchor</text>
+<circle cx="1190" cy="560" r="9" fill="#000" stroke="#8F98F0" stroke-width="3"/>
+<text x="1190" y="612" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="-0.02em" fill="#F5F5F7">Audit trail</text>
+<text x="1190" y="638" text-anchor="middle" font-size="16" fill="#A1A1A6">Report hash on-chain</text>
+<path d="M720 660 L720 690" stroke="#2C2C2E" stroke-width="1.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+<rect x="567.8" y="697" width="304.4" height="30" rx="15" fill="#000" stroke="#2C2C2E"/>
+<text x="720" y="716.5" text-anchor="middle" font-size="15" font-weight="600" fill="#F5F5F7">Liquidity providers · real yield</text>
+</svg>
+</div>
+</section>
+
 <section id="agents" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; gap: 40px; border-top: 1px solid #1D1D1F">
 <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">For agents</p>
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Agents pay agents.</h2>
 <p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Per-request payments, budget checks and a full audit trail.</p>
+<a href="../portal/agents.html" style="text-decoration: none; color: var(--accent-text); font-weight: 500; font-size: 19px">Open Agents &amp; API ›</a>
 </div>
 <div style="width: 100%; max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
 <div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
@@ -154,6 +227,7 @@ IncidentGuard
 <span aria-hidden="true" style="color: #6E6E73">→</span>
 <span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 14px 24px">Users &amp; agents</span>
 </div>
+<a href="../portal/pool.html" style="text-decoration: none; color: var(--ember); font-weight: 500; font-size: 19px; padding-top: 8px">Provide liquidity ›</a>
 </section>
 
 <section id="quote" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
@@ -161,8 +235,8 @@ IncidentGuard
 <h2 style="margin: 0; font-size: clamp(56px, 10vw, 144px); line-height: 0.98; letter-spacing: -0.05em; font-weight: 700">Got an<br>incident?</h2>
 <p style="margin: 0; max-width: 32ch; font-size: clamp(19px, 2vw, 24px); line-height: 1.4; color: #A1A1A6; font-weight: 500">See the price first. Pay once in your BSV wallet. Get a cited report.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; padding-top: 12px">
-<a class="cta" href="#top" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 18px 34px; border-radius: 980px; font-weight: 600; font-size: 19px">Get a quote</a>
-<a href="#agents" style="text-decoration: none; color: var(--accent-text); padding: 18px 10px; font-weight: 500; font-size: 19px">Integrate an agent ›</a>
+<a class="cta" href="../portal/" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 18px 34px; border-radius: 980px; font-weight: 600; font-size: 19px">Get a quote</a>
+<a href="../portal/agents.html" style="text-decoration: none; color: var(--accent-text); padding: 18px 10px; font-weight: 500; font-size: 19px">Integrate an agent ›</a>
 </div>
 </section>
 
@@ -176,23 +250,24 @@ IncidentGuard
 IncidentGuard
 </span>
 <span style="line-height: 1.6">Pay-per-investigation security intelligence, settled on <span style="color: var(--accent-text); font-weight: 600">BSV</span>.</span>
-<a href="#quote" style="align-self: flex-start; text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 10px 18px; border-radius: 980px; font-weight: 600; font-size: 14px">Get a quote</a>
+<a class="cta" href="../portal/" style="align-self: flex-start; text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 10px 18px; border-radius: 980px; font-weight: 600; font-size: 14px">Get a quote</a>
 </div>
 
 <nav aria-label="Footer" style="flex: 2 1 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 10px">
 <strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Product</strong>
 <a href="#how" style="text-decoration: none; color: #A1A1A6">How it works</a>
+<a href="#architecture" style="text-decoration: none; color: #A1A1A6">Architecture</a>
 <a href="#bsv" style="text-decoration: none; color: #A1A1A6">Why BSV</a>
 <a href="#agents" style="text-decoration: none; color: #A1A1A6">For agents</a>
 <a href="#pool" style="text-decoration: none; color: #A1A1A6">Growth Pool</a>
-<a href="#quote" style="text-decoration: none; color: #A1A1A6">Pricing</a>
+<a href="../portal/" style="text-decoration: none; color: #A1A1A6">Pricing</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Developers</strong>
-<a href="#" style="text-decoration: none; color: #A1A1A6">Agent API</a>
+<a href="../portal/agents.html" style="text-decoration: none; color: #A1A1A6">Agent API</a>
 <a href="#" style="text-decoration: none; color: #A1A1A6">Documentation</a>
-<a href="#" style="text-decoration: none; color: #A1A1A6">GitHub</a>
+<a href="https://github.com/alexandru-balaban/BSV_TRACK" style="text-decoration: none; color: #A1A1A6">GitHub</a>
 <a href="#" style="text-decoration: none; color: #A1A1A6">System status</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
@@ -217,7 +292,7 @@ IncidentGuard
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
 <a href="#" style="text-decoration: none; color: #A1A1A6">X</a>
 <a href="#" style="text-decoration: none; color: #A1A1A6">LinkedIn</a>
-<a href="#" style="text-decoration: none; color: #A1A1A6">GitHub</a>
+<a href="https://github.com/alexandru-balaban/BSV_TRACK" style="text-decoration: none; color: #A1A1A6">GitHub</a>
 <span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 6px 12px; color: #F5F5F7">Built on <span style="color: var(--accent-text); font-weight: 700">BSV</span></span>
 </div>
 </div>

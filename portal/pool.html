@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IncidentGuard — Growth Pool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+<style>.btn-ember{background:var(--ember);color:#000}.btn-ember:hover{color:#000}</style>
+</head>
+<body>
+<div class="shell">
+
+<aside class="side">
+<a class="brand" href="../landing-page/">
+<svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"/><circle cx="14" cy="13.5" r="3.5" fill="#8F98F0"/></svg>
+IncidentGuard
+</a>
+<nav class="nav" aria-label="Portal">
+<a href="./">Investigate</a>
+<a href="agents.html">Agents &amp; API</a>
+<a href="pool.html" aria-current="page">Growth Pool</a>
+</nav>
+<a class="back" href="../landing-page/">‹ Back to site</a>
+<div class="wallet">
+<span style="font-size:12px" class="muted">Wallet (demo)</span>
+<span style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px"><span class="dot"></span>Connected · BRC-100</span>
+<span class="mono muted" style="font-size:12px">identity 02a9…c41e</span>
+</div>
+</aside>
+
+<main class="main">
+
+<div>
+<span class="eyebrow" style="color:var(--ember)">Growth Pool</span>
+<h1 style="margin-top:6px">Liquidity that funds real usage</h1>
+<p class="sub">Supply BSV to a non-custodial pool. It finances capped investigation credits for approved users and AI agents. Held by on-chain rules — never by the IncidentGuard team.</p>
+</div>
+
+<section aria-label="Pool status" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+<div class="card" style="padding:20px;border-radius:18px;display:flex;flex-direction:column;gap:8px"><span class="muted" style="font-size:13px">Pool liquidity</span><span class="mono" style="font-size:24px">[AMOUNT] BSV</span></div>
+<div class="card" style="padding:20px;border-radius:18px;display:flex;flex-direction:column;gap:8px"><span class="muted" style="font-size:13px">Credits outstanding</span><span class="mono" style="font-size:24px">[N]</span></div>
+<div class="card" style="padding:20px;border-radius:18px;display:flex;flex-direction:column;gap:8px"><span class="muted" style="font-size:13px">Investigations funded</span><span class="mono" style="font-size:24px">[N]</span></div>
+<div class="card" style="padding:20px;border-radius:18px;display:flex;flex-direction:column;gap:8px"><span class="muted" style="font-size:13px">Real yield to LPs</span><span class="mono" style="font-size:24px;color:var(--ember)">[YIELD]</span></div>
+</section>
+
+<section aria-label="Flow" class="card" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;font-size:15px;font-weight:600">
+<span class="pill">Liquidity providers</span>
+<span aria-hidden="true" class="muted">→</span>
+<span class="pill" style="background:var(--ember);color:#000;border-color:var(--ember)">On-chain pool</span>
+<span aria-hidden="true" class="muted">→</span>
+<span class="pill">Capped credits</span>
+<span aria-hidden="true" class="muted">→</span>
+<span class="pill">Users &amp; agents</span>
+<span aria-hidden="true" class="muted">→</span>
+<span class="pill">Paid investigations</span>
+</section>
+
+<section style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
+<form aria-label="Provide liquidity" class="card" style="flex:1 1 320px;display:flex;flex-direction:column;gap:18px" onsubmit="return false">
+<h2 style="margin:0;font-size:20px;letter-spacing:-.02em">Provide liquidity</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="amt" class="muted" style="font-size:13px">Amount</label>
+<div style="display:flex;align-items:center;background:#000;border:1px solid var(--line2);border-radius:12px;padding:0 14px">
+<input id="amt" type="text" inputmode="decimal" placeholder="0.00" class="mono" style="flex:1;min-width:0;font-size:22px;color:var(--text);background:transparent;border:0;padding:14px 0;outline:none">
+<span class="mono" style="font-size:15px;color:var(--ember)">BSV</span>
+</div>
+</div>
+<dl class="kv" style="font-size:14px;gap:10px 16px">
+<dt>Reward terms</dt><dd class="placeholder">[REWARD TERMS]</dd>
+<dt>Withdraw</dt><dd class="placeholder">[WITHDRAW RULES]</dd>
+<dt>Custody</dt><dd>Your wallet + pool contract</dd>
+</dl>
+<button type="button" class="btn btn-ember" style="justify-content:center">Approve in wallet</button>
+</form>
+
+<div class="card" style="flex:999 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font-size:20px;letter-spacing:-.02em">Approved for credits</h2>
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;font-size:14px;min-width:420px">
+<thead><tr class="muted" style="text-align:left;font-size:12px"><th scope="col" style="font-weight:500;padding:0 0 12px">Account</th><th scope="col" style="font-weight:500;padding:0 0 12px">Type</th><th scope="col" style="font-weight:500;padding:0 0 12px">Credit cap</th><th scope="col" style="font-weight:500;padding:0 0 12px">Used</th></tr></thead>
+<tbody>
+<tr style="border-top:1px solid var(--line)"><td style="padding:14px 0">soc-triage-bot</td><td class="muted" style="padding:14px 0">Agent</td><td class="mono" style="padding:14px 0">[CAP]</td><td class="mono" style="padding:14px 0">[USED]</td></tr>
+<tr style="border-top:1px solid var(--line)"><td style="padding:14px 0">deploy-guard</td><td class="muted" style="padding:14px 0">Agent</td><td class="mono" style="padding:14px 0">[CAP]</td><td class="mono" style="padding:14px 0">[USED]</td></tr>
+<tr style="border-top:1px solid var(--line)"><td style="padding:14px 0">[TEAM NAME]</td><td class="muted" style="padding:14px 0">Human</td><td class="mono" style="padding:14px 0">[CAP]</td><td class="mono" style="padding:14px 0">[USED]</td></tr>
+</tbody>
+</table>
+</div>
+<p class="muted" style="margin:0;font-size:13px;line-height:1.5">Credits can only be spent on IncidentGuard investigations. Every spend is on-chain.</p>
+</div>
+</section>
+
+</main>
+</div>
+</body>
+</html>

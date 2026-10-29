@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IncidentGuard — Agents &amp; API</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+</head>
+<body>
+<div class="shell">
+
+<aside class="side">
+<a class="brand" href="../landing-page/">
+<svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"/><circle cx="14" cy="13.5" r="3.5" fill="#8F98F0"/></svg>
+IncidentGuard
+</a>
+<nav class="nav" aria-label="Portal">
+<a href="./">Investigate</a>
+<a href="agents.html" aria-current="page">Agents &amp; API</a>
+<a href="pool.html">Growth Pool</a>
+</nav>
+<a class="back" href="../landing-page/">‹ Back to site</a>
+<div class="wallet">
+<span style="font-size:12px" class="muted">Wallet (demo)</span>
+<span style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px"><span class="dot"></span>Connected · BRC-100</span>
+<span class="mono muted" style="font-size:12px">identity 02a9…c41e</span>
+</div>
+</aside>
+
+<main class="main">
+
+<div class="head">
+<div>
+<h1>Agents &amp; API</h1>
+<p class="sub">Let your AI agents buy investigations on their own, inside a budget you set.</p>
+</div>
+<button type="button" class="btn" style="font-size:15px;padding:12px 22px;min-height:44px">Register agent</button>
+</div>
+
+<section aria-label="How agents pay" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+<div class="card" style="padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:11px;color:var(--accent-text)">01</span><span style="font-size:14px;font-weight:600">Spots a security question</span></div>
+<div class="card" style="padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:11px;color:var(--accent-text)">02</span><span style="font-size:14px;font-weight:600">Requests a quote</span></div>
+<div class="card" style="padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:11px;color:var(--accent-text)">03</span><span style="font-size:14px;font-weight:600">Checks its budget</span></div>
+<div class="card" style="padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:11px;color:var(--accent-text)">04</span><span style="font-size:14px;font-weight:600">Pays from the wallet</span></div>
+<div class="card" style="padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:11px;color:var(--accent-text)">05</span><span style="font-size:14px;font-weight:600">Hands the report to a human</span></div>
+</section>
+
+<section aria-label="Registered agents" style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:20px;letter-spacing:-.02em">Registered agents</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+
+<article class="card" style="padding:24px;border-radius:20px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0;font-size:17px">soc-triage-bot</h3><span style="font-size:12px;color:var(--ok);font-weight:600">Active</span></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<div class="chip" style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--accent-text)">PURCHASING</span><span style="font-size:14px">Cap [CAP] BSV / day</span><span class="muted" style="font-size:13px">Guardrail Agent only</span></div>
+<div class="chip" style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.06em;color:#64D2FF">EVIDENCE ACCESS</span><span style="font-size:14px">Public incidents</span><span class="muted" style="font-size:13px">No private evidence</span></div>
+</div>
+<p class="muted" style="margin:0;font-size:13px;line-height:1.5">Paying does not unlock data. Budget and access are granted separately.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn-soft">Edit limits</button><button type="button" class="btn-danger">Revoke</button></div>
+</article>
+
+<article class="card" style="padding:24px;border-radius:20px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0;font-size:17px">deploy-guard</h3><span style="font-size:12px;color:var(--ok);font-weight:600">Active</span></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<div class="chip" style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--accent-text)">PURCHASING</span><span style="font-size:14px">Cap [CAP] BSV / day</span><span class="muted" style="font-size:13px">Guardrail + Pentest Pro</span></div>
+<div class="chip" style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.06em;color:#64D2FF">EVIDENCE ACCESS</span><span style="font-size:14px">staging.yourcompany</span><span class="muted" style="font-size:13px">Authorised scope only</span></div>
+</div>
+<p class="muted" style="margin:0;font-size:13px;line-height:1.5">Runs as a guardrail proxy: every outbound action is checked first.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn-soft">Edit limits</button><button type="button" class="btn-danger">Revoke</button></div>
+</article>
+</div>
+</section>
+
+<section aria-label="Integration" style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch">
+<div class="card" style="flex:999 1 420px;min-width:0;padding:24px;border-radius:20px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2 style="margin:0;font-size:17px">Quick start</h2><span class="mono muted" style="font-size:12px">REST</span></div>
+<pre class="mono" style="margin:0;overflow-x:auto;background:#000;border:1px solid var(--line);border-radius:12px;padding:18px;font-size:13px;line-height:1.7;color:#D1D1D6"><span class="muted"># 1. ask for a quote</span>
+POST /v1/quote   { "question": "...", "tier": "guardrail" }
+<span class="muted"># 2. pay it from the agent's wallet (BRC-100)</span>
+POST /v1/pay     { "quote_id": "q_…", "tx": "…" }
+<span class="muted"># 3. collect the report</span>
+GET  /v1/report/req_…   → findings · citations · limitations</pre>
+</div>
+<div class="card" style="flex:1 1 260px;padding:24px;border-radius:20px;display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:17px">Recent agent purchases</h2>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:13px">
+<li style="display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:12px"><span>soc-triage-bot</span><span class="mono muted">[PRICE] BSV</span></li>
+<li style="display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:12px"><span>deploy-guard</span><span class="mono muted">[PRICE] BSV</span></li>
+<li style="display:flex;justify-content:space-between;gap:8px"><span>soc-triage-bot</span><span class="mono muted">[PRICE] BSV</span></li>
+</ul>
+<a href="./" style="font-size:13px;color:var(--accent-text);text-decoration:none;margin-top:auto">Open handed-off reports ›</a>
+</div>
+</section>
+
+</main>
+</div>
+</body>
+</html>
