@@ -317,7 +317,8 @@ IncidentGuard
     if (!el) return;
     e.preventDefault();
     var top = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - 72;
-    window.scrollTo(0, Math.max(0, top));
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: Math.max(0, top), behavior: reduce ? 'auto' : 'smooth' });
   });
 })();
 </script>
