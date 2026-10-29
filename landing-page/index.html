@@ -9,132 +9,134 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 /* Accent colours: change these two to restyle the page (e.g. once the BSV brandbook is confirmed) */
-:root{--accent:#003FFF;--accent-text:#5982FF}
+:root{--accent:#5049E8;--accent-text:#8F98F0;--ember:#F0A050}
 html{scroll-behavior:smooth}
-body{margin:0;background:#000}
-a{color:#F5F5F7}a:hover{color:#FFFFFF}
+body{margin:0;background:#07071A}
+a{color:#EEEEFB}a:hover{color:#FFFFFF}
+header nav a:not(.cta):hover{color:#EEEEFB !important}
+.cta{transition:filter .15s}.cta:hover{filter:brightness(1.15)}
 </style>
 </head>
 <body>
-<div style="font-family: Inter, system-ui, sans-serif; background: #000000; color: #F5F5F7; min-height: 100vh; -webkit-font-smoothing: antialiased">
+<div style="font-family: Inter, system-ui, sans-serif; background: #07071A; color: #EEEEFB; min-height: 100vh; -webkit-font-smoothing: antialiased">
 
-<header style="position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #1D1D1F">
-<nav aria-label="Main" style="max-width: 1024px; margin: 0 auto; padding: 0 24px; min-height: 52px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
-<a href="#top" style="display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 15px">
-<svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="14" cy="13.5" r="3.5" fill="var(--accent-text)"></circle></svg>
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(7,7,26,0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #26265C">
+<nav aria-label="Main" style="margin: 0 auto; padding: 0 clamp(20px, 3vw, 48px); min-height: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">
+<svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#EEEEFB" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="14" cy="13.5" r="3.5" fill="var(--accent-text)"></circle></svg>
 IncidentGuard
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 13px; color: #A1A1A6">
-<a href="#bsv" style="text-decoration: none; color: #A1A1A6">Why BSV</a>
-<a href="#how" style="text-decoration: none; color: #A1A1A6">How it works</a>
-<a href="#agents" style="text-decoration: none; color: #A1A1A6">Agents</a>
-<a href="#pool" style="text-decoration: none; color: #A1A1A6">Growth Pool</a>
-<a href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 7px 14px; border-radius: 980px; font-weight: 600">Get a quote</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(18px, 2.4vw, 36px); font-size: 16px; font-weight: 500; color: #9A9CC8">
+<a href="#bsv" style="text-decoration: none; color: #9A9CC8">Why BSV</a>
+<a href="#how" style="text-decoration: none; color: #9A9CC8">How it works</a>
+<a href="#agents" style="text-decoration: none; color: #9A9CC8">Agents</a>
+<a href="#pool" style="text-decoration: none; color: #9A9CC8">Growth Pool</a>
+<a class="cta" href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 11px 22px; border-radius: 980px; font-weight: 600; box-shadow: 0 0 24px rgba(80,73,232,0.45)">Get a quote</a>
 </div>
 </nav>
 </header>
 
-<section id="top" style="padding: 120px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<section id="top" style="background: radial-gradient(ellipse 60% 70% at 50% 35%, rgba(108,92,255,0.18), rgba(80,73,232,0) 70%); padding: 120px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">IncidentGuard</p>
 <h1 style="margin: 0; font-size: clamp(48px, 8vw, 104px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700">Security answers.<br>Pay per question.</h1>
-<p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Cited incident investigations. Settled on <span style="color: var(--accent-text); font-weight: 700">BSV</span>.</p>
+<p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #9A9CC8; font-weight: 500">Cited incident investigations. Settled on <span style="color: var(--accent-text); font-weight: 700">BSV</span>.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding-top: 16px">
-<a href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 14px 26px; border-radius: 980px; font-weight: 600; font-size: 17px">Get a quote</a>
+<a href="#quote" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 14px 26px; border-radius: 980px; font-weight: 600; font-size: 17px; box-shadow: 0 0 32px rgba(80,73,232,0.5)" class="cta">Get a quote</a>
 <a href="#agents" style="text-decoration: none; color: var(--accent-text); padding: 14px 10px; font-weight: 500; font-size: 17px">For agents ›</a>
 </div>
 </section>
 
 <section aria-label="Product preview" style="padding: 48px 24px 140px; display: flex; justify-content: center">
-<div style="width: 100%; max-width: 760px; background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 28px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="width: 100%; max-width: 760px; background: #0F0F2C; border: 1px solid #26265C; border-radius: 28px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<span style="font-size: 15px; color: #A1A1A6">Investigation</span>
-<span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #F5F5F7">[PRICE] <span style="color: var(--accent-text)">BSV</span></span>
+<span style="font-size: 15px; color: #9A9CC8">Investigation</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #EEEEFB">[PRICE] <span style="color: var(--accent-text)">BSV</span></span>
 </div>
 <p style="margin: 0; font-size: clamp(22px, 2.6vw, 30px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25">“Does this login pattern match a known incident?”</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px">
-<div style="background: #1D1D1F; border-radius: 14px; padding: 16px; font-size: 14px; color: #A1A1A6">Quoted</div>
-<div style="background: #1D1D1F; border-radius: 14px; padding: 16px; font-size: 14px; color: #A1A1A6">Approved</div>
-<div style="background: #1D1D1F; border-radius: 14px; padding: 16px; font-size: 14px; color: #A1A1A6">Verified</div>
+<div style="background: #1B1A4A; border-radius: 14px; padding: 16px; font-size: 14px; color: #9A9CC8">Quoted</div>
+<div style="background: #1B1A4A; border-radius: 14px; padding: 16px; font-size: 14px; color: #9A9CC8">Approved</div>
+<div style="background: #1B1A4A; border-radius: 14px; padding: 16px; font-size: 14px; color: #9A9CC8">Verified</div>
 <div style="background: var(--accent); border-radius: 14px; padding: 16px; font-size: 14px; color: #FFFFFF; font-weight: 600">Delivered</div>
 </div>
 </div>
 </section>
 
-<section id="bsv" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
-<p style="margin: 0; font-size: 21px; font-weight: 600; color: #A1A1A6">Powered by</p>
+<section id="bsv" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #26265C">
+<p style="margin: 0; font-size: 21px; font-weight: 600; color: #9A9CC8">Powered by</p>
 <h2 style="margin: 0; font-size: clamp(96px, 18vw, 240px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: var(--accent-text)">BSV</h2>
-<p style="margin: 0; font-size: clamp(24px, 3vw, 40px); line-height: 1.15; letter-spacing: -0.03em; font-weight: 700; max-width: 18ch">Every answer is a payment.<br><span style="color: #6E6E73">Every payment is on-chain.</span></p>
+<p style="margin: 0; font-size: clamp(24px, 3vw, 40px); line-height: 1.15; letter-spacing: -0.03em; font-weight: 700; max-width: 18ch">Every answer is a payment.<br><span style="color: #6A6C9C">Every payment is on-chain.</span></p>
 <div style="width: 100%; max-width: 1024px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding-top: 56px; text-align: left">
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">Micro</span><span style="font-size: 17px; color: #A1A1A6">Pay cents per investigation.</span></div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">BRC-100</span><span style="font-size: 17px; color: #A1A1A6">Standard wallets. Keys stay yours.</span></div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">1 : 1</span><span style="font-size: 17px; color: #A1A1A6">One payment, one request. No reuse.</span></div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">M2M</span><span style="font-size: 17px; color: #A1A1A6">Agents pay agents. Natively.</span></div>
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">Micro</span><span style="font-size: 17px; color: #9A9CC8">Pay cents per investigation.</span></div>
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">BRC-100</span><span style="font-size: 17px; color: #9A9CC8">Standard wallets. Keys stay yours.</span></div>
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">1 : 1</span><span style="font-size: 17px; color: #9A9CC8">One payment, one request. No reuse.</span></div>
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">M2M</span><span style="font-size: 17px; color: #9A9CC8">Agents pay agents. Natively.</span></div>
 </div>
 </section>
 
-<section id="how" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 72px; border-top: 1px solid #1D1D1F">
+<section id="how" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 72px; border-top: 1px solid #26265C">
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Quote.<br>Approve.<br><span style="color: var(--accent-text)">Done.</span></h2>
 <div style="width: 100%; max-width: 880px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">See the price first.</strong><span style="font-size: 17px; color: #A1A1A6">No subscription.</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">Approve in your BSV wallet.</strong><span style="font-size: 17px; color: #A1A1A6">BSV Desktop or BSV Browser.</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">Get a cited report.</strong><span style="font-size: 17px; color: #A1A1A6">Findings. Sources. Limits.</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">See the price first.</strong><span style="font-size: 17px; color: #9A9CC8">No subscription.</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">Approve in your BSV wallet.</strong><span style="font-size: 17px; color: #9A9CC8">BSV Desktop or BSV Browser.</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">Get a cited report.</strong><span style="font-size: 17px; color: #9A9CC8">Findings. Sources. Limits.</span></div>
 </div>
 </section>
 
 <section id="agents" style="padding: 0 24px 140px">
 <div style="max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2.5" stroke="var(--accent-text)" stroke-width="1.6"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Your keys.<br><span style="color: #6E6E73">Never ours.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Your keys.<br><span style="color: #6A6C9C">Never ours.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="var(--accent-text)" stroke-width="1.6"></circle><path d="M12 8v4l2.5 2.5" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">One payment.<br><span style="color: #6E6E73">One request.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">One payment.<br><span style="color: #6A6C9C">One request.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="3" stroke="var(--accent-text)" stroke-width="1.6"></rect><path d="M12 8V5M12 5h0" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path><circle cx="12" cy="4.2" r="1" fill="var(--accent-text)"></circle><circle cx="9.5" cy="13" r="1.2" fill="var(--accent-text)"></circle><circle cx="14.5" cy="13" r="1.2" fill="var(--accent-text)"></circle><path d="M3 12.5v2M21 12.5v2" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Built for agents.<br><span style="color: #6E6E73">Paying ≠ seeing.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Built for agents.<br><span style="color: #6A6C9C">Paying ≠ seeing.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h9l3 3v13H6z" stroke="var(--accent-text)" stroke-width="1.6" stroke-linejoin="round"></path><path d="M9 11h6M9 15h4" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Fully audited.<br><span style="color: #6E6E73">Nothing exposed.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Fully audited.<br><span style="color: #6A6C9C">Nothing exposed.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 12.5 11 5h8v8l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1Z" stroke="var(--accent-text)" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="15" cy="9" r="1.4" fill="var(--accent-text)"></circle></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Price first.<br><span style="color: #6E6E73">No surprises.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Price first.<br><span style="color: #6A6C9C">No surprises.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0F0F2C; border: 1px solid #26265C; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17V12a5 5 0 0 1 4-4.9M13 17v-5a5 5 0 0 1 4-4.9" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path><circle cx="7.5" cy="16.5" r="2.5" stroke="var(--accent-text)" stroke-width="1.6"></circle><circle cx="15.5" cy="16.5" r="2.5" stroke="var(--accent-text)" stroke-width="1.6"></circle></svg>
-<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Cited.<br><span style="color: #6E6E73">Not guessed.</span></h3>
+<h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Cited.<br><span style="color: #6A6C9C">Not guessed.</span></h3>
 </div>
 </div>
 </section>
 
-<section id="pool" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
-<p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">Growth Pool</p>
+<section id="pool" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #26265C">
+<p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--ember)">Growth Pool</p>
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Back real usage.</h2>
-<p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Non-custodial liquidity on <span style="color: var(--accent-text); font-weight: 700">BSV</span>. Funds capped investigation credits.</p>
+<p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #9A9CC8; font-weight: 500">Non-custodial liquidity on <span style="color: var(--accent-text); font-weight: 700">BSV</span>. Funds capped investigation credits.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; padding-top: 40px; font-size: 17px; font-weight: 600">
-<span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 14px 24px">Liquidity providers</span>
-<span aria-hidden="true" style="color: #6E6E73">→</span>
-<span style="background: var(--accent); color: #FFFFFF; border-radius: 980px; padding: 14px 24px">Pool</span>
-<span aria-hidden="true" style="color: #6E6E73">→</span>
-<span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 14px 24px">Users &amp; agents</span>
+<span style="border: 1px solid #26265C; border-radius: 980px; padding: 14px 24px">Liquidity providers</span>
+<span aria-hidden="true" style="color: #6A6C9C">→</span>
+<span style="background: var(--ember); color: #07071A; border-radius: 980px; padding: 14px 24px; box-shadow: 0 0 32px rgba(240,160,80,0.45)">Pool</span>
+<span aria-hidden="true" style="color: #6A6C9C">→</span>
+<span style="border: 1px solid #26265C; border-radius: 980px; padding: 14px 24px">Users &amp; agents</span>
 </div>
 </section>
 
-<section id="quote" style="padding: 160px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; border-top: 1px solid #1D1D1F">
+<section id="quote" style="padding: 160px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; border-top: 1px solid #26265C">
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Got an incident?</h2>
 <a href="#top" style="text-decoration: none; background: var(--accent); color: #FFFFFF; padding: 16px 30px; border-radius: 980px; font-weight: 600; font-size: 19px">Get a quote</a>
 </section>
 
-<footer style="border-top: 1px solid #1D1D1F; background: #0B0B0C">
-<div style="max-width: 1024px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 40px; font-size: 13px; color: #86868B">
+<footer style="border-top: 1px solid #26265C; background: #0F0F2C">
+<div style="max-width: 1024px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 40px; font-size: 13px; color: #9A9CC8">
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px">
 <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px; max-width: 300px">
-<span style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #F5F5F7">
-<svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="14" cy="13.5" r="3.5" fill="var(--accent-text)"></circle></svg>
+<span style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: #EEEEFB">
+<svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#EEEEFB" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="14" cy="13.5" r="3.5" fill="var(--accent-text)"></circle></svg>
 IncidentGuard
 </span>
 <span style="line-height: 1.6">Pay-per-investigation security intelligence, settled on <span style="color: var(--accent-text); font-weight: 600">BSV</span>.</span>
@@ -143,44 +145,44 @@ IncidentGuard
 
 <nav aria-label="Footer" style="flex: 2 1 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 10px">
-<strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Product</strong>
-<a href="#how" style="text-decoration: none; color: #86868B">How it works</a>
-<a href="#bsv" style="text-decoration: none; color: #86868B">Why BSV</a>
-<a href="#agents" style="text-decoration: none; color: #86868B">For agents</a>
-<a href="#pool" style="text-decoration: none; color: #86868B">Growth Pool</a>
-<a href="#quote" style="text-decoration: none; color: #86868B">Pricing</a>
+<strong style="color: #EEEEFB; font-size: 13px; font-weight: 600">Product</strong>
+<a href="#how" style="text-decoration: none; color: #9A9CC8">How it works</a>
+<a href="#bsv" style="text-decoration: none; color: #9A9CC8">Why BSV</a>
+<a href="#agents" style="text-decoration: none; color: #9A9CC8">For agents</a>
+<a href="#pool" style="text-decoration: none; color: #9A9CC8">Growth Pool</a>
+<a href="#quote" style="text-decoration: none; color: #9A9CC8">Pricing</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Developers</strong>
-<a href="#" style="text-decoration: none; color: #86868B">Agent API</a>
-<a href="#" style="text-decoration: none; color: #86868B">Documentation</a>
-<a href="#" style="text-decoration: none; color: #86868B">GitHub</a>
-<a href="#" style="text-decoration: none; color: #86868B">System status</a>
+<strong style="color: #EEEEFB; font-size: 13px; font-weight: 600">Developers</strong>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Agent API</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Documentation</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">GitHub</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">System status</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Company</strong>
-<a href="#" style="text-decoration: none; color: #86868B">About pavLex</a>
-<a href="#" style="text-decoration: none; color: #86868B">Contact</a>
-<a href="#" style="text-decoration: none; color: #86868B">Press kit</a>
-<a href="#" style="text-decoration: none; color: #86868B">Report a vulnerability</a>
+<strong style="color: #EEEEFB; font-size: 13px; font-weight: 600">Company</strong>
+<a href="#" style="text-decoration: none; color: #9A9CC8">About pavLex</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Contact</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Press kit</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Report a vulnerability</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<strong style="color: #F5F5F7; font-size: 13px; font-weight: 600">Legal</strong>
-<a href="#" style="text-decoration: none; color: #86868B">Privacy</a>
-<a href="#" style="text-decoration: none; color: #86868B">Terms</a>
-<a href="#" style="text-decoration: none; color: #86868B">Impressum</a>
-<a href="#" style="text-decoration: none; color: #86868B">Cookies</a>
+<strong style="color: #EEEEFB; font-size: 13px; font-weight: 600">Legal</strong>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Privacy</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Terms</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Impressum</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">Cookies</a>
 </div>
 </nav>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 24px; border-top: 1px solid #1D1D1F; font-size: 12px">
-<span>© 2026 IncidentGuard. Made by <span style="color: #F5F5F7; font-weight: 600">pavLex</span> at the TUM Blockchain &amp; AI Hackathon, Munich.</span>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 24px; border-top: 1px solid #26265C; font-size: 12px">
+<span>© 2026 IncidentGuard. Made by <span style="color: #EEEEFB; font-weight: 600">pavLex</span> at the TUM Blockchain &amp; AI Hackathon, Munich.</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
-<a href="#" style="text-decoration: none; color: #86868B">X</a>
-<a href="#" style="text-decoration: none; color: #86868B">LinkedIn</a>
-<a href="#" style="text-decoration: none; color: #86868B">GitHub</a>
-<span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 6px 12px; color: #F5F5F7">Built on <span style="color: var(--accent-text); font-weight: 700">BSV</span></span>
+<a href="#" style="text-decoration: none; color: #9A9CC8">X</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">LinkedIn</a>
+<a href="#" style="text-decoration: none; color: #9A9CC8">GitHub</a>
+<span style="border: 1px solid #26265C; border-radius: 980px; padding: 6px 12px; color: #EEEEFB">Built on <span style="color: var(--accent-text); font-weight: 700">BSV</span></span>
 </div>
 </div>
 
