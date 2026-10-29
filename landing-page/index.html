@@ -10,15 +10,21 @@
 <style>
 /* Accent colours: change these two to restyle the page (e.g. once the BSV brandbook is confirmed) */
 :root{--accent:#5049E8;--accent-text:#8F98F0;--ember:#F0A050}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-padding-top:72px}
 body{margin:0;background:#000}
 a{color:#F5F5F7}a:hover{color:#FFFFFF}
 header nav a:not(.cta):hover{color:#F5F5F7 !important}
 .cta{transition:filter .15s}.cta:hover{filter:brightness(1.15)}
+/* Full-screen slides: one scroll = one section */
+html{scroll-snap-type:y mandatory}
+.slide{min-height:calc(100vh - 72px);min-height:calc(100svh - 72px);box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:center}
+footer{scroll-snap-align:end}
+/* Phones and short screens: gentle snapping so tall sections stay readable */
+@media (max-width:700px),(max-height:720px){html{scroll-snap-type:y proximity}.slide{scroll-snap-stop:normal}}
 /* Scroll reveal (only when JS runs and motion is allowed) */
 .js .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion: reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -40,7 +46,7 @@ IncidentGuard
 </nav>
 </header>
 
-<section id="top" style="padding: 120px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<section id="top" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">IncidentGuard</p>
 <h1 style="margin: 0; font-size: clamp(48px, 8vw, 104px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700">Security answers.<br>Pay per question.</h1>
 <p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Cited incident investigations. Settled on <span style="color: var(--accent-text); font-weight: 700">BSV</span>.</p>
@@ -50,7 +56,8 @@ IncidentGuard
 </div>
 </section>
 
-<section aria-label="Product preview" style="padding: 48px 24px 140px; display: flex; justify-content: center">
+<section aria-label="Product preview" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; align-items: center; gap: 40px; border-top: 1px solid #1D1D1F">
+<p style="margin: 0; font-size: 21px; font-weight: 600; color: #A1A1A6; text-align: center">One investigation, start to finish.</p>
 <div style="width: 100%; max-width: 760px; background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 28px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
 <span style="font-size: 15px; color: #A1A1A6">Investigation</span>
@@ -66,11 +73,11 @@ IncidentGuard
 </div>
 </section>
 
-<section id="bsv" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
+<section id="bsv" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: #A1A1A6">Powered by</p>
-<h2 style="margin: 0; font-size: clamp(96px, 18vw, 240px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: var(--accent-text)">BSV</h2>
-<p style="margin: 0; font-size: clamp(24px, 3vw, 40px); line-height: 1.15; letter-spacing: -0.03em; font-weight: 700; max-width: 18ch">Every answer is a payment.<br><span style="color: #6E6E73">Every payment is on-chain.</span></p>
-<div style="width: 100%; max-width: 1024px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding-top: 56px; text-align: left">
+<h2 style="margin: 0; font-size: clamp(80px, min(14vw, 18vh), 200px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: var(--accent-text)">BSV</h2>
+<p style="margin: 0; font-size: clamp(24px, 3vw, 40px); line-height: 1.15; letter-spacing: -0.03em; font-weight: 700; max-width: 26ch">Every answer is a payment.<br><span style="color: #6E6E73">Every payment is on-chain.</span></p>
+<div style="width: 100%; max-width: 1024px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding-top: 32px; text-align: left">
 <div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">Micro</span><span style="font-size: 17px; color: #A1A1A6">Pay cents per investigation.</span></div>
 <div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">BRC-100</span><span style="font-size: 17px; color: #A1A1A6">Standard wallets. Keys stay yours.</span></div>
 <div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 10px"><span style="font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent-text)">1 : 1</span><span style="font-size: 17px; color: #A1A1A6">One payment, one request. No reuse.</span></div>
@@ -78,7 +85,7 @@ IncidentGuard
 </div>
 </section>
 
-<section id="how" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 72px; border-top: 1px solid #1D1D1F">
+<section id="how" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 56px; border-top: 1px solid #1D1D1F">
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Quote.<br>Approve.<br><span style="color: var(--accent-text)">Done.</span></h2>
 <div style="width: 100%; max-width: 880px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 19px">See the price first.</strong><span style="font-size: 17px; color: #A1A1A6">No subscription.</span></div>
@@ -87,45 +94,45 @@ IncidentGuard
 </div>
 </section>
 
-<section id="agents" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; gap: 72px; border-top: 1px solid #1D1D1F">
+<section id="agents" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; gap: 40px; border-top: 1px solid #1D1D1F">
 <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">For agents</p>
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Agents pay agents.</h2>
 <p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Per-request payments, budget checks and a full audit trail.</p>
 </div>
 <div style="width: 100%; max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2.5" stroke="var(--accent-text)" stroke-width="1.6"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Your keys.<br><span style="color: #6E6E73">Never ours.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="var(--accent-text)" stroke-width="1.6"></circle><path d="M12 8v4l2.5 2.5" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">One payment.<br><span style="color: #6E6E73">One request.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="3" stroke="var(--accent-text)" stroke-width="1.6"></rect><path d="M12 8V5M12 5h0" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path><circle cx="12" cy="4.2" r="1" fill="var(--accent-text)"></circle><circle cx="9.5" cy="13" r="1.2" fill="var(--accent-text)"></circle><circle cx="14.5" cy="13" r="1.2" fill="var(--accent-text)"></circle><path d="M3 12.5v2M21 12.5v2" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Built for agents.<br><span style="color: #6E6E73">Paying ≠ seeing.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h9l3 3v13H6z" stroke="var(--accent-text)" stroke-width="1.6" stroke-linejoin="round"></path><path d="M9 11h6M9 15h4" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Fully audited.<br><span style="color: #6E6E73">Nothing exposed.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 12.5 11 5h8v8l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1Z" stroke="var(--accent-text)" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="15" cy="9" r="1.4" fill="var(--accent-text)"></circle></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Price first.<br><span style="color: #6E6E73">No surprises.</span></h3>
 </div>
-<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 180px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
+<div style="background: #0B0B0C; border: 1px solid #1D1D1F; border-radius: 22px; padding: 28px; min-height: 150px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; gap: 18px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17V12a5 5 0 0 1 4-4.9M13 17v-5a5 5 0 0 1 4-4.9" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round"></path><circle cx="7.5" cy="16.5" r="2.5" stroke="var(--accent-text)" stroke-width="1.6"></circle><circle cx="15.5" cy="16.5" r="2.5" stroke="var(--accent-text)" stroke-width="1.6"></circle></svg>
 <h3 style="margin: 0; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; letter-spacing: -0.025em">Cited.<br><span style="color: #6E6E73">Not guessed.</span></h3>
 </div>
 </div>
 </section>
 
-<section id="pool" style="padding: 140px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
+<section id="pool" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--ember)">Growth Pool</p>
 <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); line-height: 1.05; letter-spacing: -0.04em; font-weight: 700">Back real usage.</h2>
 <p style="margin: 0; font-size: clamp(19px, 2vw, 24px); color: #A1A1A6; font-weight: 500">Non-custodial liquidity on <span style="color: var(--accent-text); font-weight: 700">BSV</span>. Funds capped investigation credits.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; padding-top: 40px; font-size: 17px; font-weight: 600">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; padding-top: 24px; font-size: 17px; font-weight: 600">
 <span style="border: 1px solid #2C2C2E; border-radius: 980px; padding: 14px 24px">Liquidity providers</span>
 <span aria-hidden="true" style="color: #6E6E73">→</span>
 <span style="background: var(--ember); color: #000000; border-radius: 980px; padding: 14px 24px">Pool</span>
@@ -134,7 +141,7 @@ IncidentGuard
 </div>
 </section>
 
-<section id="quote" style="min-height: calc(100vh - 72px); min-height: calc(100svh - 72px); box-sizing: border-box; padding: 120px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
+<section id="quote" class="slide" style="padding: clamp(32px, 6vh, 80px) 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 28px; border-top: 1px solid #1D1D1F">
 <p style="margin: 0; font-size: 21px; font-weight: 600; color: var(--accent-text)">Ready when you are</p>
 <h2 style="margin: 0; font-size: clamp(56px, 10vw, 144px); line-height: 0.98; letter-spacing: -0.05em; font-weight: 700">Got an<br>incident?</h2>
 <p style="margin: 0; max-width: 32ch; font-size: clamp(19px, 2vw, 24px); line-height: 1.4; color: #A1A1A6; font-weight: 500">See the price first. Pay once in your BSV wallet. Get a cited report.</p>
