@@ -9,6 +9,8 @@ Live: https://alexandru-balaban.github.io/BSV_TRACK/
 | `portal/index.html` | Portal — Investigate flow (clickable demo: ask → quote → wallet → verify → report) |
 | `portal/agents.html` | Portal — Agents & API |
 | `portal/pool.html` | Portal — Growth Pool |
+| `about/index.html` | About pavLex (team, story, contact) |
+| `brand/pavlex-mark.svg`, `brand/pavlex-logo.svg` | pavLex logo (mark + wordmark) |
 | `portal/portal.css` | Shared portal styles (colours as CSS variables at the top) |
 
 The portal is a **demo**: wallet approval and payment verification are simulated in `portal/index.html` (see the script at the bottom). `[PRICE]`, `[CAP]`, `[AMOUNT]` etc. are placeholders.

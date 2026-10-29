@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About pavLex — the team behind IncidentGuard</title>
+<link rel="icon" href="../brand/pavlex-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--accent:#5049E8;--accent-text:#8F98F0;--ember:#F0A050;--card:#0B0B0C;--line:#1D1D1F;--line2:#2C2C2E;--text:#F5F5F7;--muted:#A1A1A6;--dim:#6E6E73}
+*{box-sizing:border-box}
+body{margin:0;background:#000;color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--text)}a:hover{color:#fff}
+header.top{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+header.top nav{padding:0 clamp(20px,3vw,48px);min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.links{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px);font-size:16px;font-weight:500}
+.links a{text-decoration:none;color:var(--muted)}.links a:hover{color:var(--text)}
+.cta{text-decoration:none;background:var(--accent);color:#fff !important;padding:11px 22px;border-radius:980px;font-weight:600;transition:filter .15s}.cta:hover{filter:brightness(1.15)}
+section{padding:clamp(80px,14vh,140px) 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
+section+section{border-top:1px solid var(--line)}
+.eyebrow{margin:0;font-size:21px;font-weight:600;color:var(--accent-text)}
+h1{margin:0;font-size:clamp(56px,9vw,128px);line-height:1;letter-spacing:-.05em;font-weight:700}
+h2{margin:0;font-size:clamp(40px,6vw,72px);line-height:1.05;letter-spacing:-.04em;font-weight:700}
+.lead{margin:0;max-width:34ch;font-size:clamp(19px,2vw,24px);line-height:1.45;color:var(--muted);font-weight:500}
+.grid{width:100%;max-width:1024px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding-top:24px;text-align:left}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:10px}
+.card .big{font-size:32px;font-weight:800;letter-spacing:-.03em;color:var(--accent-text)}
+.card p{margin:0;font-size:17px;line-height:1.5;color:var(--muted)}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-size:22px;font-weight:700;color:var(--accent-text);margin-bottom:8px}
+.role{font-size:15px;color:var(--muted)}
+.name{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.timeline{width:100%;max-width:720px;text-align:left;list-style:none;margin:0;padding:24px 0 0;display:flex;flex-direction:column}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
+.timeline .when{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent-text);padding-top:3px}
+.timeline b{font-size:19px;letter-spacing:-.01em}
+.timeline span{display:block;margin-top:4px;color:var(--muted);font-size:16px;line-height:1.5}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding-top:12px}
+.ghost{text-decoration:none;color:var(--accent-text);padding:14px 10px;font-weight:500;font-size:19px}
+footer{border-top:1px solid var(--line);background:var(--card);padding:32px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--muted);max-width:none}
+footer a{color:var(--muted);text-decoration:none}footer a:hover{color:var(--text)}
+.reveal{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none}}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:6px}.links a:not(.cta){display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+<nav aria-label="Main">
+<a href="../landing-page/" style="display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:20px;letter-spacing:-.01em">
+<svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 2.5 4 6.5v7c0 6 4.3 10.6 10 12 5.7-1.4 10-6 10-12v-7L14 2.5Z" stroke="#F5F5F7" stroke-width="2.4" stroke-linejoin="round"/><circle cx="14" cy="13.5" r="3.5" fill="#8F98F0"/></svg>
+IncidentGuard
+</a>
+<div class="links">
+<a href="../landing-page/">Product</a>
+<a href="../portal/agents.html">Agents</a>
+<a href="../portal/pool.html">Growth Pool</a>
+<a class="cta" href="../portal/">Get a quote</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="reveal" style="min-height:calc(100vh - 72px);justify-content:center">
+<img src="../brand/pavlex-mark.svg" width="112" height="112" alt="" style="border-radius:28px">
+<p class="eyebrow">About</p>
+<h1>We are pav<span style="color:var(--accent-text)">L</span>ex.</h1>
+<p class="lead">A small team building security tools that AI agents can pay for, and humans can trust.</p>
+</section>
+
+<section>
+<p class="eyebrow">What we believe</p>
+<h2>Security should be<br>pay-as-you-go.</h2>
+<div class="grid">
+<div class="card"><span class="big">Cited</span><p>Every answer shows its sources and its limits. No black boxes.</p></div>
+<div class="card"><span class="big">Fair</span><p>One question, one price, shown up front. No subscriptions.</p></div>
+<div class="card"><span class="big">Yours</span><p>Keys stay in your wallet. We never hold your funds.</p></div>
+</div>
+</section>
+
+<section>
+<p class="eyebrow">The team</p>
+<h2>Small team. Sharp focus.</h2>
+<div class="grid" style="max-width:760px">
+<div class="card"><span class="avatar">AB</span><span class="name">Alex Balaban</span><span class="role">Product, design &amp; pitch</span><p>Turns the tech into something people understand and want. TUM Management &amp; Technology.</p></div>
+<div class="card"><span class="avatar">[ ]</span><span class="name">[TEAMMATE NAME]</span><span class="role">Engineering &amp; AI</span><p>Builds the shared AI foundation, the guardrail agent and the on-chain payment rails.</p></div>
+</div>
+</section>
+
+<section>
+<p class="eyebrow">Our story</p>
+<h2>Built in one weekend.</h2>
+<ol class="timeline">
+<li><span class="when">The idea</span><div><b>Agents need security answers too.</b><span>AI agents act on their own — but nobody sells them trustworthy, per-question security checks.</span></div></li>
+<li><span class="when">The build</span><div><b>One AI core, two chains.</b><span>A shared investigation engine, sold through a portal on BSV and one on Cardano.</span></div></li>
+<li><span class="when">The stage</span><div><b>TUM Blockchain &amp; AI Hackathon 2026.</b><span>Munich, October 2026. BSV track: DeFi Rails for Agentic Payments.</span></div></li>
+</ol>
+</section>
+
+<section id="contact">
+<p class="eyebrow">Get in touch</p>
+<h2>Say hello.</h2>
+<p class="lead">Find us at the hackathon in Munich, or follow the build on GitHub.</p>
+<div class="btns">
+<a class="cta" href="https://github.com/alexandru-balaban/BSV_TRACK" style="padding:16px 30px;font-size:19px">View on GitHub</a>
+<a class="ghost" href="../portal/">Try IncidentGuard ›</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<span style="display:flex;align-items:center;gap:10px"><img src="../brand/pavlex-mark.svg" width="22" height="22" alt="" style="border-radius:6px">© 2026 pavLex. Built at the TUM Blockchain &amp; AI Hackathon, Munich.</span>
+<span style="display:flex;gap:20px"><a href="../landing-page/">IncidentGuard</a><a href="../portal/">Portal</a><a href="https://github.com/alexandru-balaban/BSV_TRACK">GitHub</a></span>
+</footer>
+
+</body>
+</html>
